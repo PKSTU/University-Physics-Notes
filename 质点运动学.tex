@@ -1,0 +1,348 @@
+\chapter{质点运动学}
+
+\begin{introduction}
+	\item \nameref{1.1}
+	\item \nameref{1.2}
+	\item \nameref{1.3}
+	\item \nameref{1.4}
+\end{introduction}
+
+\section{确定质点运动的方法} \label{1.1}
+
+\subsection{质点和参考系}
+
+\begin{definition}[质点、参考系] \label{C1-df1}
+	
+	$\bullet$ 若在所研究的问题中, 物体各点运动状态的差异只占很次要的地位, 可以忽略物体的大小和内部结构, 把它看成一个{\heiti 有质量的几何点}, 叫做{\heiti 质点}. 
+	
+	$\bullet$ 描述质点运动时用的, 固定在{\heiti 参考物}上的{\heiti 空间坐标系}和配置在各处的一套同步的{\heiti 钟}构成一个{\heiti 参考系}. 
+	
+\end{definition}
+
+\begin{note}
+	
+	质点是从客观实际中抽象出来的理想模型. 一个物体能否被看做质点, 主要取决于所研究问题的性质. 
+	
+\end{note}
+
+\subsection{描述质点运动的方法}
+
+\subsubsection{坐标法(最常用的方法)}
+
+设某时刻质点在 $P$ 点, 建立一个固结在参考系的三维直角坐标系 $Oxyz$, 则 $P$ 点的位置就可用直角坐标 $(x, y, z)$ 来确定. 
+
+除三维直角坐标系以外, 还有二维直角坐标系、平面极坐标系、球坐标系、柱坐标系等. 
+
+\subsubsection{位矢法(常用于位移、速度、加速度的定义和证明推导)}
+
+设某时刻质点在 $P$ 点, 在选定的参考系上任选一固定点 $O$, 由 $O$ 点向 $P$ 点作一矢量 $\va*{r}$, 其大小方向完全确定了质点相对于参考系的位置, 称为\textbf{位置矢量}, 简称\textbf{位矢}. 
+
+位矢与直角坐标的关系: 
+
+以位矢 $\va*{r}$ 的起点 $O$ 为原点, 建立直角坐标系 $Oxyz$, 则 $P$ 点的直角坐标 $(x, y, z)$ 就是位矢 $\va*{r}$ 沿坐标轴 $x, y, z$ 的投影. 用 $\va*{i}, \va*{j}, \va*{k}$ 分别表示沿 $x, y, z$ 三个坐标轴正方向的单位矢量, 则位矢
+
+\begin{equation}
+	\va*{r} = x \va*{i} + y \va*{j} + z \va*{k} \label{C1-eq1}
+\end{equation}
+
+\subsubsection{自然法(常用于运动轨迹已知的曲线运动, 如圆周运动)}
+
+在已知运动轨迹上选取一固定点 $O$, 规定从 $O$ 点起, 沿轨迹的某一方向量得的曲线长度 $s$ 取正值, 该方向称为自然坐标\footnote{自然坐标严格的数学定义见《工科数学分析基础(第三版)》第五章第六节的“弧微分与自然参数”部分. }的正向; 反之为负向, $s$ 取负值. $O$点为自然坐标原点, $s$ 称为自然坐标. 自然坐标 $s$ 为代数量. 
+
+\subsection{运动学方程}
+
+从数学上确定了在选定的参考系中质点相对坐标系的\textbf{位置随时间变化的关系}, 称为\textbf{质点的运动学方程}. 
+
+\vskip 0.3cm
+
+\begin{enumerate}
+	
+	\item 用直角坐标$(x,y,z)$表示质点位置时, 有
+	
+	\begin{equation}
+		\begin{cases}
+			x = x(t) \\
+			y = y(t) \\
+			z = z(t) 
+		\end{cases}
+	    \label{C1-eq2}
+	\end{equation}
+	
+	\item 用位矢$\va*{r}$表示质点位置时\footnote{该式是多元向量值函数, 定义见《工科数学分析基础(第三版)》第五章第五节. }, 有
+	
+	\begin{equation}
+		\va*{r} = \va*{r}(t) \label{C1-eq3}
+	\end{equation}
+	
+	\item 用自然坐标$s$表示质点位置时, 有
+	
+	\begin{equation}
+		s = f(t) \label{C1-eq4}
+	\end{equation}
+	
+\end{enumerate}
+
+\section{质点的位移、速度和加速度} \label{1.2}
+
+\subsection{位移}
+
+\begin{enumerate}
+	
+	\item 由位矢法定义位移: 
+	
+	\begin{definition}[位移] \label{C1-df2}
+		
+		设在时间$\Delta t$内, 质点的位置由$P$点变化到$Q$点, 作矢量$\overrightarrow{PQ}$, 其大小是$P$、$Q$之间的直线距离, 方向由$P$指向$Q$, 则矢量$\overrightarrow{PQ}$称为质点在时间$\Delta t$内的{\heiti 位移}. 
+		
+		\begin{equation}
+			\overrightarrow{PQ} = \va*{r}(t + \Delta t) - \va*{r}(t) = \Delta \va*{r}
+			\label{C1-eq5}
+		\end{equation}
+		
+	\end{definition}
+	
+	\item 若用直角坐标法定义位移, 则有
+	
+	\begin{equation}
+		\Delta \va*{r} = \Delta x \va*{i} + \Delta y \va*{j} + \Delta z \va*{k} \label{C1-eq6}
+	\end{equation}
+	
+\end{enumerate}
+
+\subsection{速度}
+
+\begin{enumerate}
+	
+	\item 平均速度和瞬时速度: 
+	
+	\begin{definition}[平均速度、瞬时速度] \label{C1-df3}
+		
+		平均速度
+		
+		\begin{equation}
+			\overline{\va*{v}} = \dfrac{\va*{r}(t + \Delta t) - \va*{r}(t)}{\Delta t} = \dfrac{\Delta \va*{r}}{\Delta t} 
+			\label{C1-eq7}
+		\end{equation}
+		
+		瞬时速度
+		
+		\begin{equation}
+			\va*{v} = \lim\limits_{\Delta t \to 0} \overline{\va*{v}} = \lim\limits_{\Delta t \to 0} \dfrac{\va*{r}(t + \Delta t) - \va*{r}(t)}{\Delta t} = \dv{\va*{r}}{t}
+			\label{C1-eq8}
+		\end{equation}
+		
+	\end{definition}
+	
+	$\bullet$ 即\textbf{速度等于位矢对时间的一阶导数}. 只要知道了位矢表示的质点的运动学方程$\va*{r} = \va*{r}(t)$, 就可以求出质点的速度. 
+	
+	\item 若用直角坐标表示, 则有
+	
+	\begin{equation}
+		\va*{v} = v_x \va*{i} + v_y \va*{j} + v_z \va*{k} \label{C1-eq9}
+	\end{equation}
+	
+	$\bullet$ 其中, $v_x = \dv{x}{t}, v_y = \dv{y}{t}, v_z = \dv{z}{t}$, 即\textbf{速度沿直角坐标系中某一坐标轴的投影, 等于质点对应于该轴的坐标对时间的一阶导数}. 
+	
+	\item 若用自然坐标表示平面曲线运动中的速度, 则速度大小为$\dv{s}{t}$, 方向为$\va*{\tau} = \lim\limits_{\Delta s \to 0} \dv{\Delta \va*{r}}{\Delta s}$, 即曲线在该点的切线方向, 从而
+	
+	\begin{equation}
+		\va*{v} = \dv{s}{t} \va*{\tau} \label{C1-eq10}
+	\end{equation}
+	
+\end{enumerate}
+
+\subsection{加速度}
+
+\begin{enumerate}
+	
+	\item 在定义之前, 首先要注意区分\textbf{速度增量(矢量)}和\textbf{速度大小的增量(标量)}: 
+	
+	\begin{align}
+		\text{速度增量: }\Delta \va*{v} &= \va*{v}(t + \Delta t) - \va*{v}(t) \label{C1-eq11} \\
+		\text{速度大小的增量: }\Delta v &= \abs{\va*{v}(t + \Delta t)} - \abs{\va*{v}(t)} \label{C1-eq12}
+	\end{align}
+	
+	\item 平均加速度和瞬时加速度: 
+	
+	\begin{definition}[平均加速度、瞬时加速度] \label{C1-df4}
+		
+		平均加速度: 
+		
+		\begin{equation}
+			\overline{\va*{a}} = \dfrac{\va*{v}(t + \Delta t) - \va*{v}(t)}{\Delta t} = \dfrac{\Delta \va*{v}}{\Delta t}
+			\label{C1-eq13}
+		\end{equation}
+		
+		瞬时加速度: 
+		
+		\begin{equation}
+			\va*{a} = \lim\limits_{\Delta t \to 0} \overline{\va*{a}} = \lim\limits_{\Delta t \to 0} \dfrac{\va*{v}(t + \Delta t) - \va*{v}(t)}{\Delta t} = \dv{\va*{v}}{t}
+			\label{C1-eq14}
+		\end{equation}
+		
+	\end{definition}
+	
+	$\bullet$ 由于$\va*{v} = \dv{\va*{r}}{t}$, 所以加速度还可表示为$\va*{a} = \dv[2]{\va*{r}}{t}$, 即\textbf{加速度等于速度对时间的一阶导数, 或位矢对时间的二阶导数}. 只要知道了$\va*{v} = \va*{v}(t)$或$\va*{r} = \va*{r}(t)$, 就可以求出质点的加速度. 
+	
+	\item 若用直角坐标表示加速度, 有
+	
+	\begin{equation}
+		\va*{a} = a_x \va*{i} + a_y \va*{j} + a_z \va*{k} \label{C1-eq15}
+	\end{equation}
+	
+	或
+	
+	\begin{equation}
+		\begin{cases}
+			a_x = \dv{v_x}{t} = \dv[2]{x}{t} \\
+			a_y = \dv{v_y}{t} = \dv[2]{y}{t} \\
+			a_z = \dv{v_z}{t} = \dv[2]{z}{t}
+		\end{cases}
+	    \label{C1-eq16}
+	\end{equation}
+	
+	$\bullet$ 即加速度沿直角坐标系中某一坐标轴的投影, 等于速度沿同一坐标轴投影对时间的一阶导数, 或等于质点对应该轴的坐标对时间的二阶导数. 
+	
+	\item 一般平面曲线运动的加速度$\va*{a}$可以分解为两个分量: \textbf{法向加速度$\va*{a}_n$和切向加速度$\va*{a}_{\tau}$}. 
+	
+	\begin{align}
+		\va*{a}_n &= a_n \va*{n} = \dfrac{v^2}{\rho} \va*{n} \label{C1-eq17} \\
+		\va*{a}_{\tau} &= a_{\tau} \va*{\tau} = \dv{v}{t} \va*{\tau} \label{C1-eq18}
+	\end{align}
+	
+	那么由矢量合成, 加速度
+	
+	\begin{equation}
+		\va*{a} = \va*{a}_n + \va*{a}_{\tau} = \dfrac{v^2}{\rho} \va*{n} + \dv{v}{t} \va*{\tau} \label{C1-eq19}
+	\end{equation}
+	
+	其中, $\va*{n}$和$\va*{\tau}$分别为沿轨迹上$M$点法线正方向和切线正方向的单位矢量, $\rho$为轨迹曲线在$M$点的曲率半径. 特别的, 在圆周运动中有$\rho = R$. 
+	
+	\vskip 0.3cm
+	
+	由于$\va*{n} \perp \va*{\tau}$, 则$\abs{\va*{a}} = \sqrt{a_n^2 + a_{\tau}^2} = \sqrt{\qty(\dfrac{v^2}{\rho})^2 + \qty(\dv{v}{t})^2}$, 方向$\tan \theta = \dfrac{a_n}{a_{\tau}}$, 其中$\theta$表示$\va*{a}_{\tau}$和$\va*{a}$的夹角. 
+	
+\end{enumerate}
+
+\begin{note}
+	
+	若已知质点运动方程
+	
+	\begin{equation*}
+		\begin{cases}
+			x = x(t) \\
+			y = y(t) \\
+			z = z(t) \\
+		\end{cases}
+	\end{equation*}
+	
+	可以通过求导得到质点的速度$\va*{v} = (v_x, v_y, v_z)$, 再求导得到质点的加速度$\va*{a} = (a_x, a_y, a_z)$. 速度大小$v = \sqrt{v_x^2 + v_y^2 + v_z^2}$, 进一步由$a_{\tau} = \dv{v}{t}$求得切向加速度$a_{\tau}$; 加速度大小$a = \sqrt{a_x^2 + a_y^2 + a_z^2}$, 进一步由$a = \sqrt{a_n^2 + a_{\tau}^2}$, 可以反解出法向加速度$a_n$, 最后根据$a_n = \dfrac{v^2}{\rho}$, 可以求出曲线在某一点处的曲率半径$\rho$. 
+	
+\end{note}
+
+\section{圆周运动} \label{1.3}
+
+质点作圆周运动时, 极径$r$是一个常量, 质点的位置可以由角坐标$\theta$完全确定, 这时$\theta$是时间$t$的函数
+
+\begin{equation}
+	\theta = \theta(t) \label{C1-eq20}
+\end{equation}
+
+\subsection{角位移}
+
+\begin{definition}[角位移] \label{C1-df5}
+	
+	角位移 
+	
+	\begin{equation}
+		\Delta \theta = \theta(t + \Delta t) - \theta(t) \label{C1-eq21}
+	\end{equation}
+	
+	是代数量, 正负号由$\Delta t$内角坐标变化的方向与选定的$\theta$的正方向相同还是相反决定. 二者同向时取正号, 反向时取负号. 一般通过右手定则选定$\theta$的正方向. 
+	
+\end{definition}
+
+\subsection{角速度}
+
+\begin{definition}[平均角速度、瞬时角速度] \label{C1-df6}
+	
+	平均角速度
+	
+	\begin{equation}
+		\overline{\omega} = \dfrac{\Delta \theta}{\Delta t} \label{C1-eq22}
+	\end{equation}
+	
+	瞬时角速度(简称角速度)
+	
+	\begin{equation}
+		\omega = \lim\limits_{\Delta t \to 0} \dfrac{\Delta \theta}{\Delta t} = \dv{\theta}{t} \label{C1-eq23}
+	\end{equation}
+	
+\end{definition}
+
+$\bullet$ \textbf{角速度等于作圆周运动质点的角坐标对时间的一阶导数}. 
+
+\subsection{角加速度}
+
+\begin{definition}[角加速度] \label{C1-df7}
+	
+	平均角加速度
+	
+	\begin{equation}
+		\overline{\alpha} = \dfrac{\Delta \theta}{\Delta t} \label{C1-eq24}
+	\end{equation}
+	
+	瞬时角加速度(角加速度)
+	
+	\begin{equation}
+		\alpha = \lim\limits_{\Delta t \to 0} \dfrac{\Delta \theta}{\Delta t} = \dv{\omega}{t} = \dv[2]{\theta}{t}
+		\label{C1-eq25}
+	\end{equation}
+	
+\end{definition}
+
+$\bullet$ \textbf{角加速度等于作圆周运动质点的角速度对时间的一阶导数, 也等于角坐标对时间的二阶导数}. 
+
+\subsection{角量与线量的关系}
+
+圆周运动中角量与线量的关系: 
+
+\begin{align}
+	\Delta s &= r \Delta \theta \label{C1-eq26} \\
+	v &= \lim\limits_{\Delta t \to 0} \dfrac{\Delta s}{\Delta t} = \lim\limits_{\Delta t \to 0} r \dfrac{\Delta \theta}{\Delta t} = r \omega \label{C1-eq27} \\
+	a_{\tau} &= \dv{v}{t} = r \dv{\omega}{t} = r \alpha \label{C1-eq28} \\
+	a_n &= \dfrac{v^2}{r} = \omega v = r \omega^2
+	\label{C1-eq29}
+\end{align}
+
+\section{不同坐标系中速度和加速度变换定理} \label{1.4}
+
+\subsection{速度变换定理}
+
+\begin{equation}
+	\va*{v}_a = \va*{v}_r + \va*{u} \label{C1-eq30}
+\end{equation}
+
+其中, $\va*{v}_a$是质点相对坐标系$Oxyz$的速度（绝对速度）, $\va*{v}_r$是质点相对坐标系$Ox'y'z'$的速度（相对速度）, $\va*{u}$是坐标系$Ox'y'z'$相对坐标系$Oxyz$的平动速度（牵连速度）. 
+
+\begin{note}
+	
+	平动速度, 详见“第5章\ {}刚体力学基础”的“刚体的平动”. 上式适用于宏观低速运动的物体的速度计算, 微观高速运动的物体需考虑相对论效应, 详见“相对论”. 
+	
+\end{note}
+
+\subsection{加速度变换定理}
+
+\begin{equation}
+	\va*{a}_a = \va*{a}_r + \va*{a}_e \label{C1-eq31}
+\end{equation}
+
+其中, $\va*{a}_a$是质点相对坐标系$Oxyz$的加速度（绝对加速度）, $\va*{a}_r$是质点相对坐标系$Ox'y'z'$的加速度（相对加速度）, $\va*{a}_e$是坐标系$Ox'y'z'$相对坐标系$Oxyz$的加速度（牵连加速度）. 
+
+\begin{note}
+	
+	上式适用于动坐标系相对于定坐标系是平动的情况, 转动的情况将在理论力学等课程中讲述. 
+	
+\end{note}
+
+\newpage

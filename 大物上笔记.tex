@@ -1,0 +1,174 @@
+\documentclass[cn,10pt,toc=twocol,device=pad,citestyle=gb7714-2015,bibstyle=gb7714-2015]{elegantbook}
+
+\title{《大学物理(上册)》笔记}
+\subtitle{彭$\bullet$笔记}
+
+\date{\today}
+\version{1.0}
+
+\extrainfo{彭康书院学业辅导与发展中心}
+
+\setcounter{tocdepth}{1}
+
+\logo{xdt-logo.png}
+\cover{cover.jpg}
+
+% 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+\definecolor{customcolor}{RGB}{32,178,170}
+\colorlet{coverlinecolor}{customcolor}
+\usepackage{physics}
+\usepackage{ulem}
+\usepackage{CJKulem}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float} %指定图片位置
+\usepackage{subfigure}%并排子图 共享标题 有子标题
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{datetime} %日期
+\usepackage{yhmath}
+\usepackage{fontspec}
+\usepackage{fontawesome}
+\renewcommand{\today}{\number\year/\number\month/\number\day}
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\chapter*{写在前面}
+
+\markboth{Introduction}{前言}
+
+该笔记包括了《大学物理》里的基本概念、定理、定律以及常见的题型。内容简要，同学们在学习或者复习的时候使用，可以较快地抓住主要内容，构建起自己的知识结构。遇到该笔记中没有归纳的题型，同学们可以自行添加，尤其是老师课上ppt中的例题和习题课上重点讲解的题目。作业做完后要参照老师给的答案订正，不懂的地方多请教老师或者和同学讨论。
+
+\vskip 0.3cm
+
+这份笔记由 能动A002班 范志泽楷(1-5章)、能动A001班 孙溢(6-7章)、电气013班 朱梓恒(8-9章) 合力编写，由 能动A002班 王鹏程 和 核工A002班 张恺 排版，在此对所有为这份笔记付出时间的同学表示感谢。因为时间略微紧张所以是各自整理一部分汇总而来，所以可能会出现语言和内容安排上不相同的情况，但是希望能对同学们大物的学习有所帮助。
+
+\vskip 0.3cm
+
+为了保证排版质量，整本笔记格式使用 \LaTeX 控制， 所有插图使用 Ai 绘制。得益于 ElegantBook 模板的优秀设计，这份笔记非常适合在电子设备(尤其是平板)上阅读。
+
+\vskip 0.3cm
+
+关于使用，目录和正文中嵌入超链接。在pdf阅读器中，点击目录中章节编号、名称或者页码即可跳转，点击正文中任何酒红色文本也可跳转至相应位置。
+
+\vskip 0.3cm
+
+教材方面，我们比较推荐《大学物理学》(第二版，由施建青、徐志君等编著，高等教育出版社出版)。
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\begin{tabular}{ccc}
+		\toprule[1pt]
+		教材 & 优点 & 缺点 \\
+		\hline
+		学校统一使用过的旧版教材 & 内容充足，习题较多 & \makecell*[c]{许多知识现已不作考察，\\ 习题答案不全，没过程} \\
+		\hline
+		学校统一使用过的新版教材 & 内容贴近考试，答案全 & 答案无过程，部分知识不详细(有删减) \\
+		\hline
+		\makecell*[c]{《大学物理学》 \\ (第二版，施建青、徐志君等，高等教育出版社出版)} & \makecell*[c]{内容充足，习题多，\\ 有配套辅导书} & 许多本校不重点考察的知识点较多 \\
+		\bottomrule[1pt]
+	\end{tabular}
+\end{table}
+
+由于编写时间紧张，水平有限，笔误、错漏在所难免，欢迎各位使用者通过邮箱和QQ群指正。
+
+\vskip 0.3cm
+
+\faEnvelope \quad xjtupkstu@163.com. 
+
+\faQq \quad 彭小帮1.0 ~ 647383944.  
+
+\begin{flushright}
+彭康书院学业辅导与发展中心\\
+\today
+\end{flushright}
+
+%\chapter*{版本更新历史}
+
+%\datechange{\today}{版本 1.0 正式发布}
+
+%\begin{change}
+	
+%	\item 修改了模板中的一些命令, 使之更贴近于本资料的内容. 
+	
+%	\item 完成了本资料初稿的所有内容. 
+	
+%\end{change}
+
+\tableofcontents
+
+\mainmatter
+
+\input{质点运动学.tex}
+
+\input{牛顿运动定律.tex}
+
+\input{功和能.tex}
+
+\input{冲量和动量.tex}
+
+\input{刚体力学基础动量矩.tex}
+
+\input{狭义相对论力学基础.tex}
+
+\input{电场.tex}
+
+\input{磁场.tex}
+
+\input{变化的电磁场.tex}
+
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\begin{thebibliography}{99}  
+	\bibitem{ref1}吴百诗.大学物理(彩色版修订本B)[M].西安:西安交通大学出版社, 2019. 
+	\bibitem{ref2}张亚红,刘睫.理论力学[M].北京:科学出版社, 2018. 
+	\bibitem{ref3}马知恩,王绵森.工科数学分析基础下册[M].北京:高等教育出版社, 2018. 
+	\bibitem{ref4}黄永义老师讲课PPT.
+	\bibitem{ref5}西安交通大学大学物理作业本. 
+\end{thebibliography}
+
+\nocite{*} 
+
+\appendix
+\chapter{表: 常见刚体的转动惯量}
+
+\begin{table}[H]
+	\footnotesize
+	\centering
+	\caption{常见刚体的转动惯量}
+	\begin{tabular}{cccc}
+		\toprule[2pt]
+		刚体 & 转轴 & 转动惯量 & 示意图 \\
+		\midrule[1pt]
+		\makecell*[c]{均质圆环 \\ 质量为$M$, 半径为$R$} & \makecell*[c]{通过圆环中心 \\ 与环面垂直} & $MR^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig1.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质圆盘 \\ 质量为$M$, 半径为$R$} & \makecell*[c]{通过圆盘中心 \\ 与盘面垂直} & $\dfrac{1}{2} MR^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig2.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质球体 \\ 质量为$M$, 半径为$R$} & 沿直径 & $\dfrac{2}{5} MR^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig3.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质球壳 \\ 质量为$M$, 半径为$R$} & 沿直径 & $\dfrac{2}{3} MR^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig4.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质圆柱体 \\ 质量为$M$, 半径为$R$} & 沿几何轴 & $\dfrac{1}{2} MR^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig5.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质细杆 \\ 质量为$M$, 长度为$L$} & \makecell*[c]{通过中心 \\ 与杆垂直} & $\dfrac{1}{12} ML^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig6.eps}}$ \\
+		\midrule[0.5pt]
+		\makecell*[c]{均质细杆 \\ 质量为$M$, 长度为$L$} & \makecell*[c]{通过杆的一端 \\ 与杆垂直} & $\dfrac{1}{3} ML^2$ & $\raisebox{-.5\height}{\includegraphics[scale=0.8]{CA-fig7.eps}}$ \\
+		\bottomrule[2pt]
+	\end{tabular}
+    \label{A1-tb1}
+\end{table}
+
+\begin{note}
+	
+	点击此处酒红色名称回到“\nameref{5.2.3}”部分. 
+	
+\end{note}
+
+\end{document}
