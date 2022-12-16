@@ -6,6 +6,12 @@
 ![License](https://img.shields.io/ctan/l/elegantbook.svg) ![CTAN Version](https://img.shields.io/ctan/v/elegantbook.svg) ![Github Version](https://img.shields.io/github/release/ElegantLaTeX/ElegantBook.svg) ![Repo Size](https://img.shields.io/github/repo-size/ElegantLaTeX/ElegantBook.svg)
 
 ---
+# 大学物理（上册）笔记
+这是彭康学导团组织编写的《大学物理（上册）》笔记，供学习、交流使用。
+
+其中 `figures` 文件夹以百度网盘的形式分享：
+链接：https://pan.baidu.com/s/18SRD1nXy_jHLyj1dAN12ng 
+提取码：PKZY
 
 # ElegantBook 优美的 LaTeX 书籍模板
 
